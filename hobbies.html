@@ -1,0 +1,165 @@
+<hobbies.html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hobbies – Boston Kapp</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    :root {
+      --bg: linear-gradient(135deg, #ffe0f0, #e1f5fe);
+      --dark-bg: linear-gradient(135deg, #1a1a1a, #121212);
+      --text: #222;
+      --accent: #ff4081;
+      --card: #fff;
+      --btn: #6200ea;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg);
+      color: var(--text);
+      transition: all 0.4s ease;
+    }
+
+    body.dark-mode {
+      background: var(--dark-bg);
+      color: #eee;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 4rem auto;
+      padding: 2rem;
+      background: var(--card);
+      border-radius: 12px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    header h1 {
+      color: var(--accent);
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    section h2 {
+      font-size: 1.8rem;
+      border-left: 5px solid var(--accent);
+      padding-left: 12px;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.1rem;
+    }
+
+    ul li {
+      margin: 12px 0;
+    }
+
+    ul li::before {
+      content: "\f121";
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      margin-right: 10px;
+      color: var(--accent);
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.6; }
+      50% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.6; }
+    }
+
+    nav {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    nav a {
+      display: inline-block;
+      padding: 10px 16px;
+      background: transparent;
+      border: 2px solid var(--btn);
+      color: var(--btn);
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      background: var(--btn);
+      color: white;
+    }
+
+    footer {
+      margin-top: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: gray;
+    }
+
+    #toggleBtn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 8px 14px;
+      background: var(--accent);
+      border: none;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    #toggleBtn:hover {
+      background: #c2185b;
+    }
+  </style>
+</head>
+<body>
+  <button id="toggleBtn">Dark Mode</button>
+
+  <div class="container">
+    <header>
+      <h1>My Hobbies</h1>
+    </header>
+
+    <section>
+      <h2>Hobbies & Interests</h2>
+      <ul>
+        <li>Coding and programming projects</li>
+        <li>Creative design and branding</li>
+        <li>Game development</li>
+        <li>Exploring automation and AI workflows</li>
+      </ul>
+    </section>
+
+    <nav>
+      <a href="index.html">← Back to Resume</a>
+    </nav>
+
+    <footer>
+      <p>© 2025 Boston Kapp | All rights reserved</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('toggleBtn').addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+</html>

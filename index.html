@@ -1,0 +1,243 @@
+<index.html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Boston Kapp – Web Developer</title>
+  <style>
+    :root {
+      --bg: linear-gradient(145deg, #fce4ec, #e1f5fe);
+      --dark-bg: linear-gradient(145deg, #1e1e1e, #121212);
+      --card: #ffffff;
+      --card-dark: #1f1f1f;
+      --text: #222;
+      --text-dark: #eee;
+      --accent: #e91e63;
+      --accent-dark: #bb86fc;
+      --nav: #6200ea;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: all 0.4s ease;
+    }
+
+    body.dark-mode {
+      background: var(--dark-bg);
+      color: var(--text-dark);
+    }
+
+    .container {
+      max-width: 950px;
+      background: var(--card);
+      margin: 3rem auto;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      animation: fadeIn 0.8s ease;
+    }
+
+    body.dark-mode .container {
+      background: var(--card-dark);
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 1rem;
+    }
+
+    .header img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      margin-right: 20px;
+      border: 3px solid var(--accent);
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin: 0;
+    }
+
+    nav a {
+      display: inline-block;
+      margin: 1rem 1rem 0 0;
+      padding: 8px 16px;
+      border: 2px solid var(--nav);
+      border-radius: 6px;
+      color: var(--nav);
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+
+    nav a:hover {
+      background: var(--nav);
+      color: white;
+    }
+
+    .section {
+      margin-top: 2rem;
+    }
+
+    .section h2 {
+      border-left: 6px solid var(--accent);
+      padding-left: 10px;
+      font-size: 1.5rem;
+    }
+
+    .skills-bar {
+      background: #eee;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    .skills-bar span {
+      display: block;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      color: white;
+      background: var(--accent);
+      width: 0;
+      transition: width 2s;
+    }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: gray;
+    }
+
+    #toggleBtn {
+      float: right;
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    #toggleBtn:hover {
+      background: #c2185b;
+    }
+
+    body.dark-mode #toggleBtn {
+      background: var(--accent-dark);
+    }
+
+    body.dark-mode #toggleBtn:hover {
+      background: #3700b3;
+    }
+
+    body.dark-mode .skills-bar span {
+      background: var(--accent-dark);
+    }
+
+    body.dark-mode nav a {
+      border-color: var(--accent-dark);
+      color: var(--accent-dark);
+    }
+
+    body.dark-mode nav a:hover {
+      background-color: var(--accent-dark);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+    
+  <div class="container">
+    <button id="toggleBtn">Toggle Dark Mode</button>
+
+    <div class="header">
+      <img src="./profile.jpg.webp" alt="boston" />
+      <div>
+        <h1>Boston Kapp</h1>
+        <p>Full Stack Web Developer | Creative Technologist</p>
+      </div>
+    </div>
+
+    <nav>
+      <a href="contact.html">Contact</a>
+      <a href="hobbies.html">Hobbies</a>
+    </nav>
+
+    <div class="section">
+      <h2>Summary</h2>
+      <p>
+        Passionate and persistent web developer blending backend logic with front-end creativity.
+        Experienced in building functional and visually engaging projects through modern tech.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Education & Certifications</h2>
+      <ul>
+        <li><strong>Pro Bootcamp Certificate</strong> – Full Stack Development, 2025</li>
+        <li><strong>Full Stack Web Developer Course</strong> – HTML, CSS, JS, React, Flask</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Skills</h2>
+      <div class="skills-bar"><span style="width: 95%">HTML/CSS</span></div>
+      <div class="skills-bar"><span style="width: 90%">JavaScript</span></div>
+      <div class="skills-bar"><span style="width: 85%">Python & Flask</span></div>
+      <div class="skills-bar"><span style="width: 80%">React</span></div>
+      <div class="skills-bar"><span style="width: 75%">SQL & DB Mgmt</span></div>
+    </div>
+
+    <div class="section">
+      <h2>Projects</h2>
+      <ul>
+        <li>Breakout Game with Speed Variations</li>
+        <li>HTML Resume & Personal Portfolio</li>
+        <li>Audiobook Store Prototype</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>Experience</h2>
+      <p>Freelance Developer – Delivering full-stack web solutions and interactive front-end features.</p>
+    </div>
+
+    <footer>
+      <p>© 2025 Boston Kapp – Designed with ✨ and passion.</p>
+    </footer>
+  </div>
+
+  <script>
+    // Toggle dark mode
+    document.getElementById('toggleBtn').addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+
+    // Animate skill bars
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.skills-bar span').forEach(bar => {
+        const width = bar.style.width;
+        bar.style.width = '0';
+        setTimeout(() => {
+          bar.style.width = width;
+        }, 300);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<contact.html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Boston Kapp</title>
+  <style>
+    :root {
+      --bg: linear-gradient(135deg, #fce4ec, #e1f5fe);
+      --dark-bg: linear-gradient(135deg, #121212, #1a1a1a);
+      --text: #222;
+      --card: #fff;
+      --accent: #e91e63;
+      --nav: #6200ea;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      transition: all 0.4s ease;
+    }
+
+    body.dark-mode {
+      background: var(--dark-bg);
+      color: #eee;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 3rem auto;
+      background: var(--card);
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+      text-align: center;
+      animation: fadeIn 0.6s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    h1 {
+      color: var(--accent);
+      font-size: 2.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      border-left: 5px solid var(--accent);
+      padding-left: 10px;
+      margin-top: 2rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      margin: 10px 0;
+    }
+
+    nav a {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 10px 16px;
+      border: 2px solid var(--nav);
+      border-radius: 6px;
+      background: transparent;
+      color: var(--nav);
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+
+    nav a:hover {
+      background: var(--nav);
+      color: white;
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.9rem;
+      color: gray;
+    }
+
+    #toggleBtn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    #toggleBtn:hover {
+      background: #c2185b;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="toggleBtn">Dark Mode</button>
+  <div class="container">
+    <header>
+      <h1>Contact Me</h1>
+    </header>
+
+    <section>
+      <h2>Get in Touch</h2>
+      <p><strong>Email:</strong> kappboston@gmail.com</p>
+      <p><strong>Phone:</strong> +27 606 132 932</p>
+    </section>
+
+    <nav>
+      <a href="index.html">← Back to Resume</a>
+    </nav>
+
+    <footer>
+      <p>© 2025 Boston Kapp | All rights reserved</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('toggleBtn').addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+</html>
