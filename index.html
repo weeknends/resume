@@ -18,11 +18,7 @@
       transition: all 0.4s ease;
     }
 
-    body.dark-mode {
-      background: var(--dark-bg);
-      color: var(--text-dark);
-    }
-
+   
     .container {
       max-width: 950px;
       background: var(--card);
@@ -33,9 +29,6 @@
       animation: fadeIn 0.8s ease;
     }
 
-    body.dark-mode .container {
-      background: var(--card-dark);
-    }
 
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(20px); }
@@ -115,15 +108,7 @@
     }
 
    
-    body.dark-mode nav a {
-      border-color: var(--accent-dark);
-      color: var(--accent-dark);
-    }
-
-    body.dark-mode nav a:hover {
-      background-color: var(--accent-dark);
-      color: white;
-    }
+  
   </style>
 </head>
 <body>
